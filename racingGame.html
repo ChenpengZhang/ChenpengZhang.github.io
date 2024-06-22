@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>zcp的个人主页</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./bin/css/main.css" rel="stylesheet">
+  <script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./bin/js/pageUtils.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./resources/pictures/avatar.jpeg" alt="头像" style="width:40px;" class="rounded-pill">  
+      </a>
+      <a class="navbar-brand" href="./index.html">zcp的主页</a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">个人信息</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">课程笔记和成果</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">有趣？的小游戏</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <canvas id="myCanvas" width="400" height="400">
+
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="./bin/js/gameMain.js"></script>
+</body>
+</html>

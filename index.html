@@ -1,132 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>zcp的个人主页</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="./bin/css/main.css" rel="stylesheet">
-  <script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./bin/js/pageUtils.js"></script>
+  <meta name="description" content="Chenpeng Zhang — building AI agents and geospatial systems. Projects, research, and a little about me.">
+  <meta name="theme-color" content="#f0f3f5">
+  <title>Chenpeng Zhang — Agents & Geospatial Systems</title>
+  <link rel="preload" href="./assets/fonts/chillround/ChillRoundFRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./assets/fonts/chillround/fonts.css">
+  <link rel="icon" href="./resources/pictures/avatar.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="./bin/css/main.css?v=local-font-1">
+  <script src="./bin/js/language.js" defer></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./resources/pictures/avatar.jpeg" alt="头像" style="width:40px;" class="rounded-pill">  
-      </a>
-      <a class="navbar-brand" href="#">zcp的主页</a> 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToElement('personalInfo', 1000)">个人信息</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">课程笔记和成果</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./racingGame.html">有趣？的小游戏</a>
-          </li> 
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Carousel -->
-  <div id="my_gallary" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicators/dots -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#my_gallary" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#my_gallary" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#my_gallary" data-bs-slide-to="2"></button>
-    </div>
-    <!-- The slideshow/carousel -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./resources/pictures/taiwu.jpeg" alt="太美丽了太舞" class="d-block w-100">
-        <div class="carousel-caption">
-          <p style="color: black;">在太舞</p>
+  <a class="skip-link" href="#about"><span data-zh="跳转到正文">Skip to content</span></a>
+  <div class="sheet" id="top">
+    <header class="masthead">
+      <div><p class="eyebrow"><span data-zh="简单的自我介绍">A LITTLE ABOUT ME</span></p><h1>Chenpeng Zhang<span class="alias"> / zcp</span></h1></div>
+      <div class="masthead-note"><p><span data-zh="AI Agents / GIS">AI agents. Geospatial systems.</span></p><button class="language-toggle" type="button" lang="zh-CN" aria-label="切换到中文" hidden>中文</button></div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Profile and navigation" data-zh-aria-label="个人资料与导航">
+        <div class="profile"><img class="avatar" src="./resources/pictures/avatar.jpeg" width="104" height="104" alt="My penguin avatar" data-zh-alt="企鹅去哪了">
+          <p class="status"><span aria-hidden="true"></span> <span data-zh="学习与开发">Learning & building</span></p>
+          <dl class="profile-details">
+            <div><dt><span data-zh="目前">CURRENTLY</span></dt><dd><span data-zh="佐治亚理工学院
+硕士研究生">Master’s student<br>at Georgia Tech</span></dd></div>
+            <div><dt><span data-zh="所在地">BASED IN</span></dt><dd><span data-zh="美国 · 亚特兰大">Atlanta, GA</span></dd></div>
+            <div><dt><span data-zh="业余爱好">OFF THE KEYBOARD</span></dt><dd><span data-zh="骑行与滑雪">Cycling & skiing</span></dd></div>
+          </dl>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="./resources/pictures/czx.jpeg" alt="你怎么知道我和陈忠祥合过影" class="d-block w-100">
-        <div class="carousel-caption">
-          <p>硕大的肌肉，激情的拍摄！</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="./resources/pictures/bike_1.jpeg" alt="我怎么看起来这么不专业" class="d-block w-100">
-        <div class="carousel-caption">
-          <p style="color: black;">和北大车队一起</p>
-        </div>
-      </div>
+        <nav class="section-nav" aria-label="On this page" data-zh-aria-label="页面导航"><p class="eyebrow"><span data-zh="页面导航">ON THIS PAGE</span></p><a href="#about">01 <span><span data-zh="关于我">About me</span></span></a><a href="#projects">02 <span><span data-zh="项目精选">Selected projects</span></span></a><a href="#background">03 <span><span data-zh="教育与研究">Background</span></span></a><a href="#toolkit">04 <span><span data-zh="技术栈">My toolkit</span></span></a></nav>
+        <div class="contact"><h2><span data-zh="联系方式">Contact</span></h2><a href="mailto:czhang931@gatech.edu"><span data-zh="电子邮件">Email me</span> <span aria-hidden="true">↗</span></a><a href="https://github.com/ChenpengZhang" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+      </aside>
+      <main>
+        <section id="about" class="intro">
+          <div class="section-heading"><h2><span data-zh="你好，我是zcp">Hi, I’m Chenpeng.</span></h2></div>
+          <p class="lede"><span data-zh="我在做一些AI Agent和地理信息系统的结合。">I build AI agents and software that make sense of the world.</span></p>
+          <p><span data-zh="我现在在佐治亚理工学院读地理信息科学与技术硕士，此前毕业于北京大学空间物理。">I’m studying Geographic Information Science and Technology at Georgia Tech, after a degree in Space Physics with a minor in GIS at Peking University.</span></p>
+          <p><span data-zh="我的工作结合智能体系统、空间数据与后端工程，涉及自然语言路线规划和跨境电商等。">My work brings together agent systems, spatial data, and backend engineering — from natural-language route planning to cross-border commerce.</span></p>
+          <div class="interest-line"><span><span data-zh="AI 智能体">AI agents</span></span><i aria-hidden="true">/</i><span><span data-zh="空间智能">Spatial intelligence</span></span><i aria-hidden="true">/</i><span><span data-zh="后端工程">Backend engineering</span></span></div>
+        </section>
+        <section id="projects">
+          <div class="section-heading"><h2><span data-zh="项目精选">Selected projects</span></h2></div>
+          <div class="projects-grid">
+            <article class="project"><p class="project-kind"><span data-zh="多智能体系统">MULTI-AGENT SYSTEMS</span></p><h3><a href="https://github.com/ChenpengZhang/globex-agent-fromzero" target="_blank" rel="noopener noreferrer">Globex Agent <span aria-hidden="true">↗</span></a></h3><p><span data-zh="面向跨境电商的智能体，支持专业分工、混合检索与长期记忆。">A cross-border commerce agent with specialized workers, hybrid retrieval, and long-term memory.</span></p><p class="project-detail"><span data-zh="采用 Supervisor–Worker 架构，结合流式响应与 Redis 语义缓存。">Supervisor–worker orchestration with streaming responses and Redis semantic caching.</span></p><div class="result"><strong>2.14×</strong><span><span data-zh="相较串行执行的检索加速">faster retrieval vs. serial execution</span></span></div><div class="tags"><span>AgentScope</span><span>OpenSearch</span><span>Redis</span></div></article>
+            <article class="project"><p class="project-kind"><span data-zh="空间智能">SPATIAL INTELLIGENCE</span> <span class="wip"><span data-zh="开发中">In progress</span></span></p><h3>MapX Agent</h3><p><span data-zh="通过自然语言规划路线，兼顾通行时间与道路舒适度。">Natural-language route planning that balances travel time with road comfort.</span></p><p class="project-detail"><span data-zh="结合空间 RAG、路况数据和多目标 A* 算法，在奥斯汀路网上进行路线规划。">Spatial RAG, road-condition data, and multi-objective A* over Austin’s road network.</span></p><div class="result"><strong>62k</strong><span><span data-zh="个路网节点">nodes in the routing network</span></span></div><div class="tags"><span>PostGIS</span><span>pgvector</span><span>AgentScope</span></div></article>
+            <article class="project project-wide"><div><p class="project-kind"><span data-zh="城市交通">URBAN MOBILITY</span></p><h3><a href="https://github.com/ChenpengZhang/MapGame" target="_blank" rel="noopener noreferrer"><span data-zh="城市公交路线规划小游戏">City Transit Planner</span> <span aria-hidden="true">↗</span></a></h3><p><span data-zh="基于清洗后的 29,103 个站点和 Dijkstra 算法，你可以尝试在本地坐遍北京的公共交通路网。">A local public-transit planner for Beijing, built on a cleaned network of 29,103 stops and Dijkstra’s algorithm.</span></p></div><div class="transit-result"><strong>13.88<span>%</span></strong><p><span data-zh="相较高德估计的
+行程时间平均绝对百分比误差">travel-time MAPE<br>against Amap estimates</span></p></div></article>
+          </div>
+        </section>
+        <section id="background">
+          <div class="section-heading"><h2><span data-zh="教育与研究经历">Along the way</span></h2></div>
+          <div class="timeline">
+            <article class="timeline-item"><div class="timeline-date"><span data-zh="2026 — 至今">2026 — PRESENT</span></div><div><h3><span data-zh="佐治亚理工学院">Georgia Institute of Technology</span></h3><p><span data-zh="地理信息科学与技术硕士">Master’s in Geographic Information Science and Technology</span></p></div></article>
+            <article class="timeline-item"><div class="timeline-date">2024 — 2025</div><div><h3><span data-zh="中国科学院">Chinese Academy of Sciences</span> <span class="role"><span data-zh="科研助理">Research Assistant</span></span></h3><p><span data-zh="在空天信息创新研究院参与基于卫星影像的草产量项目，并利用图像分割构建北京长期建筑数据集。">Aerospace Information Research Institute. Worked on satellite-based grassland monitoring and a long-term Beijing building dataset using image segmentation.</span></p><a class="research-link" href="./research/"><span data-zh="建筑高度数据 · 交互地图">Building heights · Interactive map</span> ↗</a></div></article>
+            <article class="timeline-item"><div class="timeline-date">2021 — 2025</div><div><h3><span data-zh="北京大学">Peking University</span></h3><p><span data-zh="空间物理学士 · 辅修地理信息系统">Bachelor’s in Space Physics · Minor in GIS</span></p></div></article>
+          </div>
+        </section>
+        <section id="toolkit" class="bottom-grid">
+          <div><div class="section-heading"><h2><span data-zh="技术栈">Tools I work with</span></h2></div><p class="tool-label"><span data-zh="后端与数据">BACKEND & DATA</span></p><div class="tags"><span>Python</span><span>FastAPI</span><span>Redis</span><span>MySQL</span><span>WebSocket</span></div><p class="tool-label"><span data-zh="AI 与地理空间">AI & GEOSPATIAL</span></p><div class="tags"><span>AgentScope</span><span>PyTorch</span><span>Qdrant</span><span>PostGIS</span><span>GIS</span></div></div>
+          <div class="beyond"><h2><span data-zh="语言能力">Languages</span></h2><p class="languages"><span data-zh="英语、普通话 · 没有任何问题
+日语、粤语 · 日常交流还可以">English & Mandarin · Fluent<br>Japanese & Cantonese · Intermediate</span></p><a class="photo-link" href="./resources/pictures/bike_1.jpeg"><span data-zh="骑行照片">Cycling photo</span> <span aria-hidden="true">↗</span></a></div>
+        </section>
+      </main>
     </div>
-    <!-- Left and right controls/icons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#my_gallary" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#my_gallary" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+    <footer><p>© 2026 Chenpeng Zhang</p><a href="#top"><span data-zh="返回顶部 ↑">Back to top ↑</span></a></footer>
   </div>
-
-  <div id="personalInfo" class="container-fluid">
-    <div id="personalIntro" class="container p-5 my-5 border">
-      <div class="row mb-3">
-        <div class="col" style="font-size: x-large;">
-          个人简介！
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          2021级北京大学GIS/空间物理专业在读，什么编程语言都多少会一点，软件也开发了好几个了，曾经跟着一个web3的研究小组做了一年的web3区块链数据分析，具体的内容还没放上来。数学物理方面请见下方详细信息。
-        </div>
-      </div>
-      <div class="row">
-        <div class="col" style="animation-fill-mode: backwards;">
-          现在熟悉的编程语言（熟悉度递减排序）: C#, python, javascript, SQL, java, C++, latex, ruby
-        </div>
-      </div>
-      <div class="row">
-        <div class="col" style="animation-fill-mode: backwards;">
-          现在熟悉的工具（个人实用度递减排序）: Git, Linux(zsh), PyCharm, Visual Studio, VS Code, ArcGIS, QGIS, Html/CSS, vim
-        </div>
-      </div>
-      <div class="row">
-        <div class="col" style="animation-fill-mode: backwards;">
-          现在熟悉的框架（也是熟悉度递减排序）：.NET Framework, PyQt5(with PyQgis), Flask, Sinatra, Rails
-        </div>
-      </div>
-    </div>
-    <div id="personalSkills" class="container p-5 my-5 border">
-      <div class="row mb-3">
-        <div class="col" style="font-size: x-large;">
-          做个技能可视化，评价纯主观
-        </div>
-      </div>
-      <div class="progress mb-3">
-        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:90%">Python</div>
-      </div>
-      <div class="progress mb-3">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%">C#</div>
-      </div>
-      <div class="progress mb-3">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:70%">Microsoft .Net</div>
-      </div>
-      <div class="progress mb-3">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">ArcGIS</div>
-      </div>
-      <div class="progress mb-3">
-        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:40%">SQL</div>
-      </div>
-      <div class="progress mb-3">
-        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:40%">Flask</div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>

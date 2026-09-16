@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "gl-matrix": "^3.4.3"
+    "bootstrap": "^5.3.3"
   }
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A building-height research sample from Shijingshan, Beijing, displayed in 2D and 3D." data-zh="北京石景山建筑高度科研数据样例，支持二维与三维地图查看。">
+  <meta name="theme-color" content="#f0f3f5">
+  <title data-zh="建筑高度样例 — Chenpeng Zhang">Building heights — Chenpeng Zhang</title>
+  <link rel="preload" href="../assets/fonts/chillround/ChillRoundFRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/fonts/chillround/fonts.css">
+  <link rel="icon" href="../resources/pictures/avatar.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="../assets/maplibre/maplibre-gl.css">
+  <link rel="stylesheet" href="../bin/css/research.css?v=local-font-1">
+  <script src="../bin/js/language.js" defer></script>
+  <script src="../assets/maplibre/maplibre-gl.js" defer></script>
+  <script src="../bin/js/research.js" defer></script>
+</head>
+<body>
+  <main>
+    <nav class="page-nav" aria-label="Page navigation" data-zh-aria-label="页面导航">
+      <a href="../index.html#background">← <span data-zh="返回主页">Back to profile</span></a>
+      <button class="language-toggle" type="button" lang="zh-CN" aria-label="切换到中文" hidden>中文</button>
+    </nav>
+    <header>
+      <h1><span data-zh="建筑高度样例">Building heights</span></h1>
+      <p><span data-zh="北京石景山 · 2014 年数据样例">Shijingshan, Beijing · 2014 data sample</span></p>
+      <p class="context"><span data-zh="中科院空天信息创新研究院实习期间的科研成果数据样例。">A research data sample from my internship at the Aerospace Information Research Institute, Chinese Academy of Sciences.</span></p>
+    </header>
+    <div class="toolbar" aria-label="Map controls" data-zh-aria-label="地图控制">
+      <div class="view-controls" role="group" aria-label="Map view" data-zh-aria-label="地图视图">
+        <button id="view-3d" type="button" aria-pressed="true" disabled>3D</button>
+        <button id="view-2d" type="button" aria-pressed="false" disabled>2D</button>
+        <button id="reset-view" type="button" disabled><span data-zh="查看全范围">Fit extent</span></button>
+      </div>
+      <label><input type="checkbox" id="basemap" checked disabled> <span data-zh="OSM 底图">OSM basemap</span></label>
+    </div>
+    <div class="map-frame">
+      <div id="map" role="region" aria-label="Interactive building-height map" data-zh-aria-label="交互式建筑高度地图"></div>
+      <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
+      <noscript><p class="no-script">Enable JavaScript to view the map. / 请启用 JavaScript 查看地图。</p></noscript>
+    </div>
+    <div class="map-summary">
+      <div class="legend" aria-label="Building height in metres" data-zh-aria-label="建筑高度，单位米">
+        <strong><span data-zh="高度（米）">Height (m)</span></strong>
+        <span><i style="background:#b9d9e8"></i>0–5</span><span><i style="background:#77b8cd"></i>5–15</span><span><i style="background:#388eab"></i>15–30</span><span><i style="background:#22617f"></i>30–60</span><span><i style="background:#163c59"></i>60+</span>
+      </div>
+      <p id="dataset-stats"></p>
+    </div>
+    <p id="selection" class="selection" role="status" aria-live="polite"></p>
+    <p class="help"><span data-zh="点击建筑查看高度。拖动平移，滚轮缩放；按住 Ctrl 并拖动旋转或倾斜，触屏可用双指操作。">Click a building for its height. Drag to pan, scroll to zoom; Ctrl + drag to rotate or tilt, or use two fingers on touchscreens.</span></p>
+    <div class="data-notes">
+      <p><span data-zh="三维建筑由轮廓和 HEIGHT 字段按米拉伸，未使用真实屋顶或地形模型。2014 年样例与当前 OSM 底图可能存在差异。">3D buildings are footprints extruded by HEIGHT in metres, without roof or terrain models. The 2014 sample may differ from the current OSM basemap.</span></p>
+      <p>WGS84 · <a href="../data/buildings.geojson" download><span data-zh="下载 GeoJSON">Download GeoJSON</span></a> · <a href="mailto:czhang931@gatech.edu"><span data-zh="联系我">Contact</span></a></p>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* ChillRoundF v3.200 — SIL Open Font License 1.1; see LICENSE.txt. */
+@font-face {
+  font-family:"ChillRoundF";
+  src:url("./ChillRoundFRegular.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+@font-face {
+  font-family:"ChillRoundF";
+  src:url("./ChillRoundFBold.woff2") format("woff2");
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+}
